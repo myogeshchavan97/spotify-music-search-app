@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f3f4f6;
+  font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #778298;
+}
+
+.btn {
+  letter-spacing: 1px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .btn {
+  font-size: 1.2rem;
+}
+
+.main {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.form-control {
+  font-size: 1.2rem;
+}
+
+.main-heading {
+  margin: 2rem 0;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  border: 2px solid #566273;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10%;
+  font-size: 150%;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.load-more button {
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+.message {
+  position: relative;
+  font-size: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-10%);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.loader-open {
+  overflow: hidden;
+}
+
+.errorMsg {
+  color: #f21e08;
+  background: #fff0f0;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.search-buttons {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-buttons .btn {
+  margin: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #778298;
+}
+
+.search-buttons .btn:focus {
+  box-shadow: none;
+}
+
+.albums,
+.artists,
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 1rem;
+  box-shadow: 0 2px 7px 3px #949ca5;
+}
+
+.card .card-image-link {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  max-width: 250px;
+  height: 250px;
+}
+
+@media screen and (max-width: 400px) {
+  .search-buttons {
+    flex-direction: column;
+  }
+  .search-buttons .btn {
+    margin: 0.6rem;
+  }
+  .card img {
+    height: auto;
+  }
+  .main-heading {
+    text-align: center;
+  }
+}
