@@ -1,13 +1,33 @@
 import React from 'react';
 import _ from 'lodash';
 import { Button } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 import AlbumsList from './AlbumsList';
 import ArtistsList from './ArtistsList';
 import PlayList from './PlayList';
 
 const SearchResult = (props) => {
-  const { loadMore, result, setCategory, selectedCategory } = props;
+  const {
+    isValidSession,
+    loadMore,
+    result,
+    setCategory,
+    selectedCategory
+  } = props;
   const { albums, artists, playlist } = result;
+
+  if (!isValidSession()) {
+    return (
+      <Redirect
+        to={{
+          pathname: '/',
+          state: {
+            session_expired: true
+          }
+        }}
+      />
+    );
+  }
 
   return (
     <React.Fragment>
